@@ -37,6 +37,7 @@ const AddHabitForm = () => {
           onChange={handleNameChange}
           placeholder="Enter habit name"
           fullWidth
+          required
         />
         <FormControl fullWidth>
   <InputLabel>Frequency</InputLabel>
