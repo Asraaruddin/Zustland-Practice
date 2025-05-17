@@ -29,7 +29,9 @@ const useHabitStore = create<HabitState>((set) => ({
           createdAt: new Date().toISOString(),
         },
       ],
-    })),
-}));
+    })
+),
+})
+);
 
 export default useHabitStore;
