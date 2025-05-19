@@ -39,6 +39,8 @@ const HabitList = () => {
                 </Button>
                 <Button variant="outlined" color="error"
                 startIcon={<DeleteIcon/>}
+                onClick={()=> removeHabit(habit.id)}
+
                 >
                   Remove
                 </Button>
