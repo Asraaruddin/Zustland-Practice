@@ -7,42 +7,7 @@ interface Habit {
   frequency: "daily" | "weekly";
   completedDates: string[];
   createdAt: string;
-};fetchHabits: async () => {
-  set({ isLoading: true, error: null });
-
-  try {
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-
-    // Simulated habits data
-    const mockHabits: Habit[] = [
-      {
-        id: '1',
-        name: 'Exercise',
-        frequency: 'daily',
-        completedDates: [],
-        createdAt: new Date().toISOString(),
-      },
-      {
-        id: '2',
-        name: 'Read Book',
-        frequency: 'weekly',
-        completedDates: [],
-        createdAt: new Date().toISOString(),
-      },
-    ];
-
-    set({
-      habits: mockHabits,
-      isLoading: false,
-    });
-  } catch (error) {
-    set({
-      error: "Failed to fetch Habits",
-      isLoading: false,
-    });
-  }
 }
-
 
 interface HabitState {
   habits: Habit[];
@@ -56,7 +21,7 @@ interface HabitState {
 
 const useHabitStore = create<HabitState>()(
   persist(
-    (set,get) => ({
+    (set, get) => ({
       habits: [],
       isLoading: false,
       error: null,
@@ -98,26 +63,47 @@ const useHabitStore = create<HabitState>()(
         set({ isLoading: true, error: null });
 
         try {
-            const currentHabits =  get().habits;
-            if(currentHabits.length>0){
-                set({isLoading:false})
-            }
-          // Simulate fetching with delay
+          const currentHabits = get().habits;
+          if (currentHabits.length > 0) {
+            set({ isLoading: false });
+            return;
+          }
+
+          // Simulate API delay
           await new Promise((resolve) => setTimeout(resolve, 1000));
 
-          // You can also simulate fetched data here if needed
+          // Simulated mock habits
+          const mockHabits: Habit[] = [
+            {
+              id: '1',
+              name: 'Exercise',
+              frequency: 'daily',
+              completedDates: [],
+              createdAt: new Date().toISOString(),
+            },
+            {
+              id: '2',
+              name: 'Read Book',
+              frequency: 'weekly',
+              completedDates: [],
+              createdAt: new Date().toISOString(),
+            },
+          ];
 
-          set({ isLoading: false });
+          set({
+            habits: mockHabits,
+            isLoading: false,
+          });
         } catch (error) {
           set({
+            error: error instanceof Error ? error.message : "Failed to fetch habits",
             isLoading: false,
-            error: "Failed to fetch habits",
           });
         }
       },
     }),
     {
-      name: 'habit-storage',
+      name: 'habit-storage', // localStorage key
     }
   )
 );
