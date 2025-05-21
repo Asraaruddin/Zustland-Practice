@@ -35,6 +35,9 @@ Performance-focused: State updates only trigger necessary re-renders.
 Selectors for optimized rendering: Components subscribe to only relevant parts of state.
 
 
+![image alt ](https://github.com/Asraaruddin/Zustland-Practice/blob/914e5141d429e94427878c6a3bbe3b3582100ee1/habit-tracker-1.png)
+
+
 ![image alt ]()
 
 
