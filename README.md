@@ -38,7 +38,7 @@ Selectors for optimized rendering: Components subscribe to only relevant parts o
 ![image alt ](https://github.com/Asraaruddin/Zustland-Practice/blob/914e5141d429e94427878c6a3bbe3b3582100ee1/habit-tracker-1.png)
 
 
-![image alt ]()
+![image alt ](https://github.com/Asraaruddin/Zustland-Practice/blob/944298cf2e2ed9523b8b211b7d15e80da3b27ddc/habit-tracker-2.png)
 
 
 
