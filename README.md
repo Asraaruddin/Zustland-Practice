@@ -2,7 +2,7 @@
 
 ## 🔗 Live Demo
 
-👉 [Click here to view the live project](https://habittrackerzustalnd.netlify.app)
+👉 [Click here to view the live project](https://habittrackerzustland.netlify.app/)
 
 
 # React + TypeScript + Vite
