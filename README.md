@@ -1,61 +1,38 @@
+🏆 Habit Tracker with Zustand | React + TypeScript + Vite
+Live Demo: 👉 https://habittrackerzustland.netlify.app/
+
+This Habit Tracker leverages React, TypeScript, and Vite to provide a seamless and performant user experience. Zustand is used for state management, ensuring lightweight and optimized state handling without unnecessary re-renders.
+
+🚀 Tech Stack & Features
+⚡ Core Technologies
+React + Vite → Fast builds & Hot Module Replacement (HMR).
+
+TypeScript → Type safety & scalability.
+
+Zustand → Minimal and powerful global state management.
 
 
-## 🔗 Live Demo
+🎨 UI Design with Material UI (MUI)
+This project leverages MUI for a modern and accessible user experience:
 
-👉 [Click here to view the live project](https://habittrackerzustland.netlify.app/)
+Pre-built components → Speeds up development with ready-made UI elements.
+
+Theme customization → Easily adaptable for dark mode and brand consistency.
+
+Responsiveness → Works seamlessly across devices without extra CSS.
+
+Accessible design → Built-in ARIA support for improved user experience.
 
 
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔄 State Management with Zustand
+This project utilizes Zustand for managing global state efficiently:
 
-Currently, two official plugins are available:
+Minimal boilerplate: No need for reducers or complex setups.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Performance-focused: State updates only trigger necessary re-renders.
 
-## Expanding the ESLint configuration
+Selectors for optimized rendering: Components subscribe to only relevant parts of state.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
